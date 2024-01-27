@@ -1,8 +1,8 @@
 <?php
 $servername="localhost";
-$username="gabi";
-$password="12345";
-$databasename="website_database";
+$username="user";
+$password="password";
+$databasename="database";
 $database_connection=mysqli_connect($servername , $username , $password , $databasename);
 
 if ( !$database_connection ) {
@@ -19,12 +19,13 @@ echo "Successfully connected to database: $databasename";
 	<br><br>This is the PHP script that display the database<br><br>
 <?php
 
-	$database_query="SELECT * FROM website_database.dealer WHERE brand='$_POST[brand]' AND model='$_POST[model]' AND fuel_type='$_POST[fuel_type]' AND year >= '$_POST[year]' AND mileage <= '$_POST[mileage]' AND price <= '$_POST[price]' ORDER BY price ASC";
+	$database_query="SELECT * FROM database.dealer WHERE brand='$_POST[brand]' AND model='$_POST[model]' AND fuel_type='$_POST[fuel_type]' AND year >= '$_POST[year]' AND mileage <= '$_POST[mileage]' AND price <= '$_POST[price]' ORDER BY price ASC";
 	mysqli_query($database_connection, $database_query) or die("Query error to database: $databasename");
-	
-	if ( $database_query ) $found=1;
 
-	if ( $found != 1 ) echo "No car was found";
+	#	FIX ME
+	#if ( $database_query ) $found=1;
+
+	#if ( $found != 1 ) echo "No car was found";
 
 	$image=$_FILES["image"]["name"];
 	$query_result=mysqli_query($database_connection, $database_query);
