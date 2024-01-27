@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<body>
+	<center>
+		<br><br><br>
+		<h3>Please fill in your car specs</h3>
+		<form action="add_car.php" method="post" enctype="multipart/form-data">
+			<label for="brand">Brand:</label>
+			<input type="text" name="brand" required>
+			<br>
+			<label for="model">Model:</label>
+			<input type="text" name="model" required>
+			<br>
+			<label for="mileage">Mileage:</label>
+			<input type="text" name="mileage" required>
+			<br>
+			<label for="fuel_type">Fuel Type:</label>
+			<select name="fuel_type" required>
+				<option value="diesel">Diesel</option>
+				<option value="Petrol">Petrol</option>
+				<option value="plug-in">Plug-In</option>
+				<option value="electric">Electric</option>
+			</select>
+			<br>
+			<label for="year">Year:</label>
+			<input type="text" name="year" required>
+			<br>
+			<label for="price">Price:</label>
+			<input type="text" name="price" required>
+			<br>
+			<label for="image">Image:</label>
+			<input type="file" name="image" required>
+			<br><br>
+			<input type="submit" name="action" value="Upload">
+		</form>
+	</center>
+	</body>
+</html>
