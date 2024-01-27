@@ -2,7 +2,7 @@
 $servername="localhost";
 $username="$_POST[username]";
 $password="$_POST[password]";
-$databasename="website_database";
+$databasename="database";
 $database_connection=mysqli_connect($servername , $username , $password , $databasename);
 
 if (!$database_connection) {
