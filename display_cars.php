@@ -1,8 +1,8 @@
 <?php
 $servername="localhost";
-$username="gabi";
-$password="12345";
-$databasename="website_database";
+$username="user";
+$password="password";
+$databasename="database";
 $database_connection=mysqli_connect($servername , $username , $password , $databasename);
 
 if ( !$database_connection ) {
@@ -16,7 +16,7 @@ echo "Successfully connected to database: $databasename";
 	<body>
 	<br><br><br>	
 <?php
-	$database_query="SELECT * FROM website_database.dealer";
+	$database_query="SELECT * FROM database.dealer";
 	mysqli_query($database_connection, $database_query) or die("Query error to database: $databasename");
 
 	$query_result=mysqli_query($database_connection, $database_query);
