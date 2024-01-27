@@ -1,8 +1,8 @@
 # OSA_project_web_app
 #### Requires mariadb or mysql database with user and password.
-### Replace "user" and "password" with your username and password
-## dealerauto.php is the main web page
-## login.html grants access to dealer_admin.php
+#### Replace `"user"` and `"password"` with your username and password.
+## `dealerauto.php` is the main web page.
+## `login.html` grants access to `dealer_admin.php`.
 #### Requires the following tables:
 ```
 CREATE TABLE dealer (
